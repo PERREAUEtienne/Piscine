@@ -1,0 +1,13 @@
+<?php
+
+namespace App\Http\Controllers;
+use App\Post;
+
+   class PostController extends Controller {
+
+      public function index(){
+         $posts=Post::all();
+         return view('test2', compact('posts')); 
+         /* la fonction compact équivaut à array('posts' => $posts) */
+      }
+   }
